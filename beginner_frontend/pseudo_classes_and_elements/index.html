@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>PSEUDO</title>
+        <meta charset = "utf-8">
+        <style>
+            /* .box.box1{
+                width: 100%;
+                height: 20vh;
+                background-color: red;
+            } */
+            
+            /* .box.box1:hover{
+                background-color: yellow;*//*khi trỏ chuột vào sẽ đổi màu*/
+            /*} */
+            /* đảo ngược hover and active sẽ thấy khác biệt */
+            /*.box.box1:active{
+                background-color: blue;*//* khi ấn vào sẽ đổi màu*/
+                
+            /*}*/
+            /* li.one:last-child:active{
+                color: red;
+            }
+            ol{
+                font-size: 30px;
+            } */
+
+            .box.box1{
+                width: 100vh;
+                height: 200px;
+                background-image: url(http://media.bizwebmedia.net/sites/76685/data/Upload/2015/10/meo_khi_chup_anh_den_trang__2.jpg);
+                background-size: 100vh;
+            }
+            .box.box1::before{
+                content: "before";
+                display: block;
+                width: 50px;
+                height: 40%;
+                background-color: chartreuse;
+                font-size: 30;
+                color: red;
+            }
+            .box.box1::after{
+                content: "after";
+                display: block;
+                width: 50px;
+                height: 40%;
+                background-color: firebrick;
+                font-size: 30;
+                color: red;
+            }
+            /* h1::first-letter{
+                font-size: 100px;
+            } */
+            h1::first-line{
+                font-size: 50px;
+            }
+            h1::selection{
+                background-color: sienna;
+            }
+            /* chọn để copy có background nâu */
+        </style>
+    </head>
+    <body>
+        <div class = "box box1">
+            <div><p style="color: red; font-size: 12.3px;">ajfkhsafjdshaflkafa</p></div>
+        </div>
+        <div class = "box box2">
+            <!-- <h1>Pseudo Classes</h1>
+            <ol>
+                <li class = "one">:root</li>
+                <li class = "one">:hover</li>
+                <li class = "one">:active</li>
+                <li class = "one">:first-child</li>
+                <li class = "one">:last-child</li>
+            </ol>
+            <h1>Hello</h1>
+            <ol>
+                <li id = "too">test_last-child_li</li>
+            </ol> -->
+            <h1>Pseudo elements <br> Some time</h1>
+            <ol>
+                <li>::before</li>
+                <li>::after</li>
+                <li>::first-letter</li>
+                <li>::first-line</li>
+                <li>::selection</li>
+            </ol>
+        </div>
+    </body>
+</html>
