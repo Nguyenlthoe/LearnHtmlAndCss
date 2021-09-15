@@ -10,6 +10,28 @@ html{
 body{
     
     height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.btn{
+    display: inline-block;
+    text-decoration: none;
+    background-color: transparent;
+    border : none;
+    outline: none;
+    color: white;
+    padding: 10px 50px;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: opacity linear .2s;
+}
+.btn:hover{
+    opacity: 0.8;
+
+}
+.btn + .btn{
+    margin-left: 20px;
 }
 body > div {
 }
@@ -22,7 +44,12 @@ body > div {
     right: 32px;
     box-sizing: border-box;
 }
-
+.btn--success{
+    background-color: rgb(22, 207, 53);
+}
+.btn--error{
+    background-color: rgb(214, 80, 70);
+}
 .toast{
     display: flex;
     align-items: center;
@@ -31,7 +58,7 @@ body > div {
     border-left: 4px solid;
     padding: 10px 0;
     box-shadow: 0 5px 8px rgba(0 , 0, 0, 0.5);
-    animation: slideInLeft ease 0.3s, fadeout linear 1s 2s forwards;
+    transition: all linear 0.3s;
 }
 @keyframes slideInLeft{
     from{
@@ -72,6 +99,7 @@ body > div {
 .toast__close{
     margin: 0 10px 0 10px;
     color: rgba(0 , 0, 0, 0.5);
+    cursor: pointer;
 }
 .toast--success .toast__icon{
     color: rgb(22, 207, 53);
